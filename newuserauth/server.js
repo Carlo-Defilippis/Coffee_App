@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 // mlab config url
-const MONGO_URL = "mongodb+srv://maurya512:enph739ektA@cluster0.vufo2.mongodb.net/coffeeshopusers?retryWrites=true&w=majority";
+const MONGO_URL = (process.env.MONGODB_URL);
 const app = express();
 
 // connecting to the mongo database
