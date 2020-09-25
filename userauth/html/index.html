@@ -1,0 +1,30 @@
+<!-- the client -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Home </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="message-box">
+        <h1 id="welcome-message"></h1>
+        <a href="/private">Go to private area</a>
+    </div>
+
+    <script>
+        // we instantiate the request object using new XMLHttpRequest()
+        const req = new XMLHttpRequest();
+        // we set the onreadystatechange property with the function that will be called after we get our answer.
+        // in the callback we are checking if we got a successful response and if so, we parse the response, get the user object
+        req.onreadystatechange = function() {
+            if(req.readyState == 4 && req.status == 200) {
+                const user = JSON.parse(req.response).user;
+                document.getElementById("welcome-message").innerText=`Welcome ${user.username}!`;
+            }
+        };
+        req.open("GET", "http://localhost:3000/user", true);
+        req.send();
+    </script>
+</body>
+</html>
