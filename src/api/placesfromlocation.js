@@ -2,12 +2,12 @@ import {
     Client,
     axiosInstance,
     PlaceInputType,
-    PlaceType2,
-    Status, PlaceType1
+    Status,
 } from "@googlemaps/google-maps-services-js";
 import GeoLocateMe from './geolocation'
 
 let geoLocation;
+var myStore = 'Dunkin Donuts'
 
 export default geoLocation = new GeoLocateMe();
 geoLocation.getAddress().then(r => {
@@ -20,7 +20,7 @@ geoLocation.getAddress().then(r => {
     client.placesNearby({
         params: {
             location: myArray.join(),
-            input: 'coffee',
+            input: myStore,
             inputtype: PlaceInputType.textQuery,
             radius: 50000,
             type: ["cafe",
