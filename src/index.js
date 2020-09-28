@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom";
-import places from './api/places'
-import placesfromlocation from './api/placesfromlocation'
+import places from './utils/locationapi/places'
+import placesfromlocation from './utils/locationapi/placesfromlocation'
 
 ReactDOM.render(
   <React.StrictMode>
