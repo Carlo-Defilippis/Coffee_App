@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { Route } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -6,11 +7,17 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom";
 import places from './utils/locationapi/places'
 import placesfromlocation from './utils/locationapi/placesfromlocation'
+import PayPalExpressBtn from './components/PaypalButton/PayPalButton'
+
+const newBtn = new PayPalExpressBtn()
+
+console.log(newBtn)
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
     {/* <Route exact path="/" component={places} /> */}
+      {/* <Route exact path="/" component={PayPalExpressBtn} /> */}
     </Router>
     <App />
   </React.StrictMode>,
