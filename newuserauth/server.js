@@ -46,6 +46,13 @@ app.post('/user/login', (req,res) => {
         })
     })
 });
+
+// delete user
+app.post('/user/delete/:id', (req,res) => {
+    User.findByIdAndDelete(req.params.id)
+    .then(() => res.json('User deleted.'))
+    .catch(err => res.status(400).json('Error: ' + err ));
+});
 // port
 const PORT = process.env.PORT || 8080;
 
