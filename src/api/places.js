@@ -1,11 +1,14 @@
 import {Client, axiosInstance, PlaceInputType} from "@googlemaps/google-maps-services-js";
 
+var myStore = 'Dunkin Donuts'
+
+
 const client = new Client({});
  
 export default client
   .findPlaceFromText({
     params: {
-    input: 'dunkin donuts',
+    input: myStore,
     inputtype: PlaceInputType.textQuery,
     key: 'AIzaSyBBYO5GUhGzV2Jo0mCE5bYzIHbpLfKC5eo',
     fields: ["name","place_id","formatted_address", "photos", "type"],
