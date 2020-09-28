@@ -1,20 +1,6 @@
-require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const { User } = require('../models/user');
 
-// mlab config url
-const MONGO_URL = (process.env.MONGODB_URL);
-const app = express();
-
-// connecting to the mongo database
-mongoose.connect(MONGO_URL).then(()=> console.log("db connected"))
-.catch(err => console.log(err));
-
-// importing the models so we can use it
-const { User } = require('./models/user');
-
-// convert the data body to json format
+const router = require('express').Router();
 app.use(bodyParser.json());
 
 // posting user data to database
@@ -47,16 +33,26 @@ app.post('/user/login', (req,res) => {
     })
 });
 
-// delete user
-app.post('/user/delete/:id', (req,res) => {
+// delete route
+app.delete('/user/delete/:id', (req, res) => {
+    // in this route we will delete the user based on their selection
     User.findByIdAndDelete(req.params.id)
-    .then(() => res.json('User deleted.'))
-    .catch(err => res.status(400).json('Error: ' + err ));
-});
-// port
-const PORT = process.env.PORT || 8080;
-
-app.listen(PORT, () => {
-    console.log(`Server Started at PORT ${PORT}`);
+    .then(() => res.json('User Deleted'))
+    .catch(err => res.status(400).json('User: ' + err));
 });
 
+// update the user
+app.update('/user/update/:id' , (req,res) => {
+    // updates the user' login info if they need to 
+    User.findByIdAndUpdate(req.params.id)
+    .then(newUser => {
+        newUser.email = req.body.email;
+        newUser.password = req.body.password;
+    })
+
+    newUser.save()
+    .then(() => res.json('User updated!'))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+module.exports = app;
