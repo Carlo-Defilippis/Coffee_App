@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/localapi/API";
+import Selections from "../components/Selections";
 
 class Products extends Component {
 
