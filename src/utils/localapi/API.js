@@ -16,9 +16,9 @@ export default {
     getPastry: function() {
         return axios.get("https://coffeeproducts.herokuapp.com/api/products/pastry");
     },
-    getPromo: function() {
-        return axios.get("https://coffeeproducts.herokuapp.com/api/products/promo");
-    },
+    // getPromo: function() {
+    //     return axios.get("https://coffeeproducts.herokuapp.com/api/products/promo");
+    // },
     getPromo: function() {
         return axios.get("https://coffeeproducts.herokuapp.com/api/products/promo");
     },
