@@ -9,6 +9,7 @@ import places from './utils/locationapi/places'
 import placesfromlocation from './utils/locationapi/placesfromlocation'
 import PayPalExpressBtn from './components/PaypalButton/PayPalButton'
 import About from './pages/About'
+import Footer from './components/Footer';
 
 const newBtn = new PayPalExpressBtn()
 
@@ -30,6 +31,7 @@ ReactDOM.render(
           <Route exact path="/checkout" component={CheckOut} /> */}
           <Route exact path="/logout" component={About} />
         </Wrapper>
+        <Footer/>
       </div>
     </Router>
       
