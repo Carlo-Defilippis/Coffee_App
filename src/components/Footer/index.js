@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-
 import Button from "../Button"
 import { Link } from 'react-router-dom';
 import {
@@ -17,7 +16,9 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join our exclusive membership to receive the latest news and trends
+          More ways to pay. More ways to get rewarded.
+            <span> As a Coffee App memember, you'll earn free food and drink whether you pay with cash, credit card or gift card.
+            </span>
         </p>
         <p className='footer-subscription-text'>
           You can unsubscribe at any time.
@@ -54,13 +55,6 @@ function Footer() {
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
-          </div>
-          <div className='footer-link-items'>
             <h2>Social Media</h2>
             <Link to='/'>Instagram</Link>
             <Link to='/'>Facebook</Link>
@@ -74,10 +68,10 @@ function Footer() {
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               <SiCoffeescript className='navbar-icon' />
-              Cofee App
+              Coffee App
             </Link>
           </div>
-          <small className='website-rights'>LAVISH © 2020</small>
+          <small className='website-rights'>Coffee App © 2020</small>
           <div className='social-icons'>
             <Link
               className='social-icon-link'
