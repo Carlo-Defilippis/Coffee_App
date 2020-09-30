@@ -16,6 +16,11 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Coffeeshop", { useNewUrlParser: true });
 
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 app.post("/submit", ({ body }, res) => {
   db.create(body)
     .then(dbUser => {
