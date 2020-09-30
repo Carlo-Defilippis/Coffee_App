@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { Route } from 'react'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import ReactDOM from 'react-dom';
+import Wrapper from "./components/Wrapper";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router } from "react-router-dom";
 import places from './utils/locationapi/places'
 import placesfromlocation from './utils/locationapi/placesfromlocation'
 import PayPalExpressBtn from './components/PaypalButton/PayPalButton'
+import About from './pages/About'
 
 const newBtn = new PayPalExpressBtn()
 
@@ -17,19 +18,18 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
+        <Wrapper>
+          <Route exact path="/" component={About} />
+          {/* <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/selections" component={Selections} />
           <Route exact path="/promo" component={Promotions} />
           <Route exact path="/locations" component={Locations} />
           <Route exact path="/order" component={Order} />
-          <Route exact path="/checkout" component={CheckOut} />
-          <Route exact path="/logout" component={Home} />
-        </Switch>
-       
+          <Route exact path="/checkout" component={CheckOut} /> */}
+          <Route exact path="/logout" component={About} />
+        </Wrapper>
       </div>
     </Router>
       
