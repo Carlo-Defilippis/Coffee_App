@@ -24,6 +24,8 @@ mongoose.connect(
   }
 );
 
+app.set("port", PORT)
+
 // app.post("/submit", ({ body }, res) => {
 //   db.create(body)
 //     .then(dbUser => {
