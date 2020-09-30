@@ -2,7 +2,6 @@
 
 .footer-container {
   background-color: rgb(128, 141, 158);
-  /* position: bottom; */
   bottom: 0;
   width: 100%;
   display: flex;
