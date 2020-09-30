@@ -4,6 +4,8 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Navbar from "../components/Navbar"
+import Button from "../components/Button"
+
 
 export default function About() {
   return (
