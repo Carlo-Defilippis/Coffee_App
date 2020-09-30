@@ -1,20 +1,15 @@
 import React from "react";
 import "./style.css";
-import Button from "../Button"
 import { Link } from 'react-router-dom';
 import {
   FaFacebook,
   FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin
+  FaTwitter
 } from 'react-icons/fa';
 import { SiCoffeescript } from 'react-icons/si';
-
 function Footer() {
   return (
     <div className='footer-container'>
-     
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
@@ -23,8 +18,6 @@ function Footer() {
               Coffee App
             </Link>
             </div>
-        
-          
           <div className='social-icons'>
             <Link
               className='social-icon-link'
@@ -42,7 +35,6 @@ function Footer() {
             >
               <FaInstagram />
             </Link>
-           
             <Link
               className='social-icon-link'
               to='/'
@@ -58,6 +50,4 @@ function Footer() {
     </div>
   );
 }
-
 export default Footer;
-
