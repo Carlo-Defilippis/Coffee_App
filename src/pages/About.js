@@ -4,6 +4,8 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Navbar from "../components/Navbar"
+import Button from "../components/Button"
+import Footer from "../components/Footer"
 
 export default function About() {
   return (
@@ -57,6 +59,7 @@ export default function About() {
             </p>
           </Col>
         </Row>
+        <Footer />
       </Container>
     </div>
   );
