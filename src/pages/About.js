@@ -59,7 +59,7 @@ export default function About() {
             </p>
           </Col>
         </Row>
-        <Footer />
+        
       </Container>
     </div>
   );
