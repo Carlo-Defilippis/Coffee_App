@@ -11,18 +11,16 @@ export default function About() {
   return (
     <div>
       <Navbar>
-        <h1>Pupster</h1>
-        <h2>They're the Good Boys and Girls</h2>
       </Navbar>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1 style={{textAlign: "center"}}>Welcome To Pupster!</h1>
+            <h1 style={{textAlign: "center"}}>Welcome To Coffee App!</h1>
           </Col>
         </Row>
         <Row>
-          <Button></Button>
           <Col size="md-12">
+          <Button style={{justifyContent: "center"}}></Button>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
               consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
@@ -38,7 +36,6 @@ export default function About() {
             </p>
           </Col>
         </Row>
-        
       </Container>
     </div>
   );
