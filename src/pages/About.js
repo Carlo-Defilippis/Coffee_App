@@ -3,14 +3,15 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import Navbar from "../components/Navbar"
 
 export default function About() {
   return (
     <div>
-      <Hero>
+      <Navbar>
         <h1>Pupster</h1>
         <h2>They're the Good Boys and Girls</h2>
-      </Hero>
+      </Navbar>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
