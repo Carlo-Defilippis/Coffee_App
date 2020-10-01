@@ -5,6 +5,7 @@
 .btn {
     padding: 8px 20px;
     border-radius: 4px;
+    width: 100%;
     outline: none;
     border: none;
     cursor: pointer;
@@ -85,7 +86,7 @@
     border:none;
 }
 .primary {
-    background-color: rgb(206, 146, 36);
+    background-color: lightslategray;
     color: whitesmoke;
     border:none;
 }

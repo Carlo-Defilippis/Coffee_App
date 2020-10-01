@@ -6,16 +6,17 @@ import Col from "../components/Col";
 import Navbar from "../components/Navbar"
 import Button from "../components/Button"
 import Footer from "../components/Footer"
+import Login from "../components/Login"
 
 export default function About() {
   return (
     <div>
       <Navbar>
       </Navbar>
-      <Container style={{ marginTop: 30 }}>
+      <Container style={{position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)"}}>
         <Row>
           <Col size="md-12">
-            <h1 style={{textAlign: "center"}}>Welcome To Coffee App!</h1>
+            <h1 style={{ textAlign: "center" }}>Welcome To Coffee App!</h1>
           </Col>
         </Row>
         <Row>
@@ -36,6 +37,7 @@ export default function About() {
               tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
             </p>
           </Col>
+          <Col size="md-4"><div><br></br></div></Col>
         </Row>
       </Container>
     </div>

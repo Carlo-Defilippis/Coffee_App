@@ -10,7 +10,9 @@ import placesfromlocation from './utils/locationapi/placesfromlocation'
 import PayPalExpressBtn from './components/PaypalButton/PayPalButton'
 import About from './pages/About'
 import Footer from './components/Footer';
-
+import Login from './components/Login/index';
+import Signup from './components/SignUp/index';
+import Profile from './components/Profile/index';
 const newBtn = new PayPalExpressBtn()
 
 console.log(newBtn)
@@ -21,21 +23,20 @@ ReactDOM.render(
       <div>
         <Wrapper>
           <Route exact path="/" component={About} />
-          {/* <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/welcome" component={Welcome} />
-          <Route exact path="/selections" component={Selections} />
-          <Route exact path="/promo" component={Promotions} />
-          <Route exact path="/locations" component={Locations} />
-          <Route exact path="/order" component={Order} />
-          <Route exact path="/checkout" component={CheckOut} /> */}
-          <Route exact path="/logout" component={About} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/profile" component={Profile} />
+          {/* <Route exact path="/welcome" component={Welcome} /> */}
+          {/* <Route exact path="/selections" component={Selections} /> */}
+          {/* <Route exact path="/promo" component={Promotions} /> */}
+          {/* <Route exact path="/locations" component={Locations} /> */}
+          {/* <Route exact path="/order" component={Order} /> */}
+          {/* <Route exact path="/checkout" component={CheckOut} /> */}
+          {/* <Route exact path="/logout" component={About} /> */}
         </Wrapper>
         <Footer/>
       </div>
     </Router>
-      
-
     <App />
   </React.StrictMode>,
   document.getElementById('root')

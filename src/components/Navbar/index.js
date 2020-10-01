@@ -5,6 +5,7 @@ import './style.css';
 import { SiCoffeescript } from 'react-icons/si';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import { Signup } from '../SignUp/index';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -65,14 +66,14 @@ function Navbar() {
                             </li>
                             <li className="nav-btn">
                                 {button ? (
-                                    <Link to='/sign-up' className="btn-link">
+                                    <Link to='/Signup' className="btn-link">
                                         <Button buttonStyle='btn--outline' buttonSize='btn--mobile'
                                             onClick={closeMobileMenu}>
                                             Sign Up
                                </Button>
                                     </Link>
                                 ) : (
-                                        <Link to='/sign-up' className='btn-link'>
+                                        <Link to='/Signup' className='btn-link'>
                                             <Button buttonStyle='btn--outline'
                                                 buttonSize='btn--mobile'>
                                                 Sign Up
