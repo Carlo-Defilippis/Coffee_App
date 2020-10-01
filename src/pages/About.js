@@ -20,7 +20,8 @@ export default function About() {
         </Row>
         <Row>
           <Col size="md-12">
-          <Button style={{justifyContent: "center"}}></Button>
+          <Button style={{justifyContent: "center"}}> Sign Up</Button>
+          
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
               consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
