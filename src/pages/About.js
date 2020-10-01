@@ -6,6 +6,7 @@ import Col from "../components/Col";
 import Navbar from "../components/Navbar"
 import Button from "../components/Button"
 import Footer from "../components/Footer"
+import Login from "../components/Login"
 
 export default function About() {
   return (
@@ -28,7 +29,7 @@ export default function About() {
         <Row>
         <Col size="md-4"><div><br></br></div></Col>
           <Col size="md-4">
-            <p style={{fontSize: "small", textAlign: "center"}}>If you already have an account <a href="#">Log in here.</a>
+            <p style={{fontSize: "small", textAlign: "center"}}>If you already have an account <a href="/Login">Log in here.</a>
             </p>
           </Col>
           <Col size="md-4"><div><br></br></div></Col>
