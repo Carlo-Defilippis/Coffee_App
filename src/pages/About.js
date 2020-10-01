@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar"
 import Button from "../components/Button"
 import Footer from "../components/Footer"
 import Login from "../components/Login"
+
 export default function About() {
   return (
     <div>
