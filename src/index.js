@@ -34,8 +34,6 @@ ReactDOM.render(
         <Footer/>
       </div>
     </Router>
-      
-
     <App />
   </React.StrictMode>,
   document.getElementById('root')
