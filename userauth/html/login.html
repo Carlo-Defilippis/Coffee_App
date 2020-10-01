@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Login </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action='/login' method="post">
+        <div class="title">
+            <h3> Login </h3>
+        </div>
+        <div class="field">
+            <label>Username:</label>
+            <input type="text" name="username"/>
+            <br />
+        </div>
+        <div class="field">
+            <label>Password:</label>
+            <input type="password" name="password" required/>
+        </div>
+        <div class="field">
+            <input class="submit-btn" type="submit" value="Submit" required />
+        </div>
+        <label id="error-message"></label>
+    </form>
+    <script>
+        const urlParmas = new URLSearchParams(window.location.search);
+        const info = urlParmas.get('info');
+
+        if(info) {
+            const errorMessage = document.getElementById("error-message");
+            errorMessage.innerText = info;
+            errorMessage.style.display = block;
+        }
+    </script>
+</body>
+</html>
+
+<!-- the script tag at the bottom hs URLSearchParams which instantiates object passing window.location.search property, which contains the parameters string in our URL
+Then we use the .get() method passing in the parameter name we're looking for
+At this point, we either have an info message or not. -->
