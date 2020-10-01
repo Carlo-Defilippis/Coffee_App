@@ -15,6 +15,7 @@
     "geolocation": "^0.2.0",
     "geolocator": "^2.1.5",
     "jquery": "^3.5.1",
+    "jwt-decode": "^3.0.0",
     "navigator": "^1.0.1",
     "paypal-rest-sdk": "^1.8.1",
     "react": "^16.13.1",
