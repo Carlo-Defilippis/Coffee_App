@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Login from './components/Login/index';
 import Signup from './components/SignUp/index';
 import Profile from './components/Profile/index';
+import Navbar from './components/Navbar';
 const newBtn = new PayPalExpressBtn()
 
 console.log(newBtn)
@@ -21,14 +22,12 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <div>
+      <Navbar></Navbar>
         <Wrapper>
           <Route exact path="/" component={About} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/profile" component={Profile} />
-          {/* <Route exact path="/welcome" component={Welcome} /> */}
           {/* <Route exact path="/selections" component={Selections} /> */}
-          {/* <Route exact path="/promo" component={Promotions} /> */}
           {/* <Route exact path="/locations" component={Locations} /> */}
           {/* <Route exact path="/order" component={Order} /> */}
           {/* <Route exact path="/checkout" component={CheckOut} /> */}

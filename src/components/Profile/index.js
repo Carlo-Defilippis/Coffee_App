@@ -1,11 +1,13 @@
 import React , { Component } from 'react'
 import jwt_decode from 'jwt-decode'
+import Container from '../Container/index'
 
 class Profile extends Component {
     constructor() {
         super()
         this.state = {
             email: '',
+            firstName: '',
             errors: ''
         }
     }
@@ -20,20 +22,10 @@ class Profile extends Component {
 
     render() {
         return (
-            <div className="container">
-            <div className="jumbotron mt-5">
-              <div className="col-sm-8 mx-auto">
-                <h1 className="text-center">PROFILE</h1>
-              </div>
-              <table className="table col-md-6 mx-auto">
-                <tbody>
-                  <tr>
-                    <td>Email</td>
-                    <td>{this.state.email}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div>
+          
+            <h1 style={{ textAlign: "center" }}>Welcome {this.state.firstName}</h1>
+
           </div>
         )
     }
