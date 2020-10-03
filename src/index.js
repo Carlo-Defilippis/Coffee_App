@@ -14,7 +14,10 @@ import Login from './components/Login/index';
 import Signup from './components/SignUp/index';
 import Profile from './components/Profile/index';
 import Navbar from './components/Navbar';
+import * as userFunction from './components/userFunction/index'
 const newBtn = new PayPalExpressBtn()
+
+console.log(userFunction.test)
 
 console.log(newBtn)
 
