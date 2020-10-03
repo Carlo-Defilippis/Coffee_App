@@ -11,13 +11,14 @@ import PayPalExpressBtn from './components/PaypalButton/PayPalButton'
 import About from './pages/About'
 import Footer from './components/Footer';
 import Login from './components/Login/index';
-import Signup from './components/SignUp/index';
+import signup from './App';
 import Profile from './components/Profile/index';
 import Navbar from './components/Navbar';
-import * as userFunction from './components/userFunction/index'
+// import * as userFunction from './components/userFunction/index'
+
 const newBtn = new PayPalExpressBtn()
 
-console.log(userFunction.test)
+// console.log('Login route: ', userFunction.getProfile('user'))
 
 console.log(newBtn)
 
@@ -29,8 +30,8 @@ ReactDOM.render(
         <Wrapper>
           <Route exact path="/" component={About} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Signup} />
-          {/* <Route exact path="/selections" component={Selections} /> */}
+          <Route exact path="/signup" component={signup} />
+          <Route exact path="/profile" component={Profile} />
           {/* <Route exact path="/locations" component={Locations} /> */}
           {/* <Route exact path="/order" component={Order} /> */}
           {/* <Route exact path="/checkout" component={CheckOut} /> */}
@@ -39,7 +40,6 @@ ReactDOM.render(
         <Footer/>
       </div>
     </Router>
-    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
