@@ -40,11 +40,11 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "serve -s build",
+    "start": "node backend/server.js && serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
     "pack": "webpack"
   },
   "eslintConfig": {
@@ -64,6 +64,9 @@
   },
   "devDependencies": {
     "webpack-cli": "^3.3.12"
+  },
+  "engines": {
+    "node": "10.16.0"
   },
   "proxy": "http://localhost:5000"
 }
