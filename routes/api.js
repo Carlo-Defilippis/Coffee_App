@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Coffeeshop", { 
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://maurya512:enph739ektA@cluster0.vufo2.mongodb.net/coffeeshopusers?retryWrites=true&w=majority", { 
   useNewUrlParser: true,
   useFindAndModify: false
 });
