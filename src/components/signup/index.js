@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import GeoLocateMe from '../../utils/locationapi/geolocation'
+import './style.css'
 
 const Signup = function () {
 
