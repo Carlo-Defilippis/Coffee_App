@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import GeoLocateMe from '../../utils/locationapi/geolocation'
+
+const JWTToken = 'carloivanmauryael'
+
+// import GeoLocateMe from '../../utils/locationapi/geolocation'
 
 const Signup = function () {
 
@@ -11,29 +14,32 @@ const Signup = function () {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmpassword, setConfirmPassword] = useState("");
-    const geolocate = geoLoc();
+    // const geolocation = geoLoc();
 
+    console.log(window)
     useEffect(() => {
         axios
-            .get("/api/users")
+            .get("/", { headers: {"Authorization" : `Bearer ${JWTToken}`}})
             .then((users) => setUsers(users), console.log('Users in useEffect: ', users))
             .catch((err) => console.log(err));
     }, []);
 
-    function geoLoc() {
-        const geoLocation = new GeoLocateMe();
-        geoLocation.getAddress().then(r => {
-            console.log(r.split(','))
-            let myArray = r.split(',')
-            console.log({ lat: `${myArray[0]}`, lng: `${myArray[1]}` })
-        })
-    };
-
-
+    // function geoLoc() {
+    //     const geoLocation = new GeoLocateMe();
+    //     geoLocation.getAddress().then(r => {
+    //         console.log(r.split(','))
+    //         let myArray = r.split(',')
+    //         console.log({ lat: `${myArray[0]}`, lng: `${myArray[1]}` })
+    //     })
+    // };
+    var myBody = { firstname, lastname, email, password, confirmpassword }
+    console.log('MyBody:', myBody)
+    console.log(firstname, lastname, email, password, confirmpassword)
     function submitForm(event) {
         event.preventDefault()
 
-        console.log('These are the states', firstname, lastname, email, password, confirmpassword, geolocate)
+
+        console.log('These are the states', firstname, lastname, email, password, confirmpassword)
 
         if (email === "" || password === "" || firstname === "" || lastname === "") {
             alert("Please fill out all fields!");
@@ -44,14 +50,12 @@ const Signup = function () {
             alert("The passwords don't match")
         } else {
             event.preventDefault()
-            axios
-                .post("/api/users", {
-                    firstname: firstname,
-                    lastname: lastname,
-                    email: email,
-                    password: password,
-                    geolocate: geolocate
-                }, console.log(firstname, lastname, email, password), console.log("This is the users ", users))
+            axios.post('/register', {
+                firstname: firstname,
+                lastname: lastname,
+                email: email,
+                password: password,
+            })
                 .then(function (result) {
                     alert("Account created successfully");
                     console.log("Result of succesful login: ", result);
@@ -60,6 +64,21 @@ const Signup = function () {
                 .catch(function (err) {
                     console.log("Could not create account. Please try again", err.response);
                 });
+            // axios
+            //     .post("/api/users", {
+            //         firstname: firstname,
+            //         lastname: lastname,
+            //         email: email,
+            //         password: password,
+            //     }, console.log(firstname, lastname, email, password), console.log("This is the users ", users))
+            //     .then(function (result) {
+            //         alert("Account created successfully");
+            //         console.log("Result of succesful login: ", result);
+            //         this.props.history.push('/profile');
+            //     })
+            //     .catch(function (err) {
+            //         console.log("Could not create account. Please try again", err.response);
+            //     });
         }
     }
     console.log('Email and Password', email, password)
