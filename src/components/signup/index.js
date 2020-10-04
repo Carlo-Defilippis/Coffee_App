@@ -68,74 +68,76 @@ const Signup = function () {
         <>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6 mt-5 mx-auto">
-                        <form onSubmit={submitForm}>
-                            <h1 className="h3 mb-3 font-weight-normal">Sign up and get your coffee fix!</h1>
-                            <div className="form-group">
-                                <label htmlFor="firstname">First Name</label>
-                                <input
-                                    type="text"
-                                    id='firstname'
-                                    aria-required="true"
-                                    className="form-control"
-                                    name="firstname"
-                                    placeholder="Enter first name"
-                                    onChange={(e) => setFirstName(e.target.value)}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="lastname">Last Name</label>
-                                <input
-                                    type='text'
-                                    id='lastname'
-                                    aria-required='true'
-                                    className='form-control'
-                                    name="lastname"
-                                    placeholder="Enter last name"
-                                    onChange={(e) => setLastName(e.target.value)}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="email">Email address</label>
-                                <input
-                                    type="email"
-                                    aria-required="true"
-                                    className="form-control"
-                                    name="email"
-                                    placeholder="Enter email"
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="password">Password</label>
-                                <input
-                                    type="password"
-                                    aria-required="true"
-                                    className="form-control"
-                                    name="password"
-                                    placeholder="Password"
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="confirmpassword">Confirm Password</label>
-                                <input
-                                    type="password"
-                                    aria-required="true"
-                                    className="form-control"
-                                    name="confirmpassword"
-                                    placeholder="Confirm Password"
-                                    onChange={(e) => setConfirmPassword(e.target.value)}
-                                />
-                            </div>
-                            <br></br>
-                            <button
-                                type="submit"
-                                className="btn btn-lg btn-primary btn-block"
-                            >
-                                Sign Up!
+                    <div className='card'>
+                        <div className="col-md-6 mt-5 mx-auto">
+                            <form onSubmit={submitForm}>
+                                <h1 className="h3 mb-3 font-weight-normal">Sign up and get your coffee fix!</h1>
+                                <div className="form-group">
+                                    <label htmlFor="firstname">First Name</label>
+                                    <input
+                                        type="text"
+                                        id='firstname'
+                                        aria-required="true"
+                                        className="form-control"
+                                        name="firstname"
+                                        placeholder="Enter first name"
+                                        onChange={(e) => setFirstName(e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="lastname">Last Name</label>
+                                    <input
+                                        type='text'
+                                        id='lastname'
+                                        aria-required='true'
+                                        className='form-control'
+                                        name="lastname"
+                                        placeholder="Enter last name"
+                                        onChange={(e) => setLastName(e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="email">Email address</label>
+                                    <input
+                                        type="email"
+                                        aria-required="true"
+                                        className="form-control"
+                                        name="email"
+                                        placeholder="Enter email"
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="password">Password</label>
+                                    <input
+                                        type="password"
+                                        aria-required="true"
+                                        className="form-control"
+                                        name="password"
+                                        placeholder="Password"
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="confirmpassword">Confirm Password</label>
+                                    <input
+                                        type="password"
+                                        aria-required="true"
+                                        className="form-control"
+                                        name="confirmpassword"
+                                        placeholder="Confirm Password"
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                    />
+                                </div>
+                                <br></br>
+                                <button
+                                    type="submit"
+                                    className="btn btn-lg btn-primary btn-block"
+                                >
+                                    Sign Up!
                   </button>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
