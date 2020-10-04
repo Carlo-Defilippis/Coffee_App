@@ -20,7 +20,7 @@ function login(email, password) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
     };
-
+    console.log('THIS GOT HIT', email, password, requestOptions)
     return fetch(`${config}/users/authenticate`, requestOptions)
         .then(handleResponse)
         .then(user => {
@@ -85,13 +85,16 @@ function _delete(id) {
 }
 
 function handleResponse(response) {
+    console.log("Resaponse before the return: ",response)
     return response.text().then(text => {
         const data = text && JSON.parse(text);
+        console.log(response)
         if (!response.ok) {
             if (response.status === 401) {
                 // auto logout if 401 response returned from api
                 logout();
                 window.location.reload();
+                console.log("Window was reloaded!")
             }
 
             const error = (data && data.message) || response.statusText;

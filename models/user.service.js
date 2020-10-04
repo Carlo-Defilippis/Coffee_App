@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('../backend/database');
 const User = db.User;
-
+console.log("TESTTEST")
 
 module.exports = {
     authenticate,
@@ -16,6 +16,7 @@ module.exports = {
 
 async function authenticate({ email, password }) {
     const user = await User.findOne({ email });
+    console.log('TEST: ', user, bcrypt.compareSync(password, user.password))
     if (user && bcrypt.compareSync(password, user.password)) {
         console.log('User ID: ', user.id)
         const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: '7d' });
