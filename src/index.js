@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Login from './components/Login/index';
 import Signup from './components/SignUp/index';
 import Profile from './components/Profile/index';
+import Selection from './components/Selections';
 const newBtn = new PayPalExpressBtn()
 
 console.log(newBtn)
@@ -26,6 +27,7 @@ ReactDOM.render(
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/profile" component={Profile} />
+          <Route exact path="/menu" component={Selection} />
           {/* <Route exact path="/welcome" component={Welcome} /> */}
           {/* <Route exact path="/selections" component={Selections} /> */}
           {/* <Route exact path="/promo" component={Promotions} /> */}
