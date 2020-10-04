@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./style.css";
+import '../Selections/style.css'
 
-function Promo() {
+function Coffee() {
   const [prods, setProds] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://coffeeproducts.herokuapp.com/api/products/promo")
+      .get("https://coffeeproducts.herokuapp.com/api/products/coffee")
       .then((res) => {
         console.log(res);
         setProds(res.data);
@@ -34,4 +34,4 @@ function Promo() {
   );
 }
 
-export default Promo;
+export default Coffee;
