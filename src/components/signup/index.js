@@ -69,7 +69,7 @@ const Signup = function () {
         <>
             <div className="container">
                 <div className="row">
-                    <div className='card'>
+                    <div className='card mx-auto'>
                         <div className="col-md-6 mt-5 mx-auto">
                             <form onSubmit={submitForm}>
                                 <h1 className="h3 mb-3 font-weight-normal">Sign up and get your coffee fix!</h1>
