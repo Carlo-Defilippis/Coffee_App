@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import Wrapper from "./components/Wrapper";
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import places from './utils/locationapi/places'
 import placesfromlocation from './utils/locationapi/placesfromlocation'
@@ -11,12 +10,18 @@ import PayPalExpressBtn from './components/PaypalButton/PayPalButton'
 import About from './pages/About'
 import Footer from './components/Footer';
 import Login from './components/Login/index';
-import Signup from './components/SignUp/index';
+import signup from './components/signup/index';
 import Profile from './components/Profile/index';
 import Selection from './components/Selections';
 const newBtn = new PayPalExpressBtn()
 
-console.log(newBtn)
+
+
+// const newBtn = new PayPalExpressBtn()
+
+// // console.log('Login route: ', userFunction.getProfile('user'))
+
+// console.log(newBtn)
 
 ReactDOM.render(
   <React.StrictMode>
@@ -44,7 +49,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// // If you want your app to work offline and load faster, you can change
+// // unregister() to register() below. Note this comes with some pitfalls.
+// // Learn more about service workers: https://bit.ly/CRA-PWA
+// serviceWorker.unregister();

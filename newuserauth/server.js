@@ -2,9 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const { User } = require('./models/user');
 
 // mlab config url
-const MONGO_URL = (process.env.MONGODB_URL);
+const MONGO_URL = 'mongodb+srv://maurya512:enph739ektA@cluster0.vufo2.mongodb.net/coffeeshopusers?retryWrites=true&w=majority'
 const app = express();
 
 // connecting to the mongo database
@@ -12,7 +13,6 @@ mongoose.connect(MONGO_URL).then(()=> console.log("db connected"))
 .catch(err => console.log(err));
 
 // importing the models so we can use it
-const { User } = require('./models/user');
 
 // convert the data body to json format
 app.use(bodyParser.json());
