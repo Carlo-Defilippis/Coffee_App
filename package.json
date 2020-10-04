@@ -38,6 +38,7 @@
     "realm": "^6.1.3",
     "serve": "^11.3.2"
   },
+  
   "scripts": {
     "dev": "react-scripts start",
     "start": "node backend/server.js && serve -s build",

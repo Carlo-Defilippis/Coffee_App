@@ -1,6 +1,8 @@
 import React , { Component } from 'react'
 import jwt_decode from 'jwt-decode'
 import Container from '../Container/index'
+import GoogleMaps from '../../utils/locationapi/googlemaps'
+import Places from '../../utils/locationapi/placesfromlocation'
 
 class Profile extends Component {
     constructor() {
@@ -23,9 +25,15 @@ class Profile extends Component {
     render() {
         return (
           <div>
-          
-            <h1 style={{ textAlign: "center" }}>Welcome {this.state.firstName}</h1>
+          <Container>
+            <GoogleMaps></GoogleMaps>
+          {/* google maps */}
 
+            <h1 style={{ textAlign: "center" }}>Welcome {this.state.firstname}</h1>
+          {/* Places near me */}
+
+          {/* Past orders */}
+          </Container>
           </div>
         )
     }

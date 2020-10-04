@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    const { email, password } = req.body;
+    const { firstname, lastname, email, password, geolocation } = req.body;
     const newUser = new User({
-        email: email, password: password 
+        firstname: firstname,lastname: lastname,email: email, password: password, geolocation:geolocation
     })
     newUser.save()
         .then(() => res.json({
