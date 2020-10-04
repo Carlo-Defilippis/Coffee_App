@@ -11,9 +11,10 @@ import PayPalExpressBtn from './components/PaypalButton/PayPalButton'
 import About from './pages/About'
 import Footer from './components/Footer';
 import Login from './components/Login/index';
-import signup from './App';
+import signup from './components/signup/index';
 import Profile from './components/Profile/index';
 import Navbar from './components/Navbar';
+import CheckOut from './components/CheckOut/index';
 // import * as userFunction from './components/userFunction/index'
 
 const newBtn = new PayPalExpressBtn()
@@ -34,7 +35,7 @@ ReactDOM.render(
           <Route exact path="/profile" component={Profile} />
           {/* <Route exact path="/locations" component={Locations} /> */}
           {/* <Route exact path="/order" component={Order} /> */}
-          {/* <Route exact path="/checkout" component={CheckOut} /> */}
+          <Route exact path="/checkout" component={CheckOut} />
           {/* <Route exact path="/logout" component={About} /> */}
         </Wrapper>
         <Footer/>
