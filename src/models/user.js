@@ -1,11 +1,19 @@
 console.log('this file was touched')
-// create a userSchema with email and password that user  will enter. 
+// create a userSchema with firstname, lastname, email and password that user  will enter. 
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
+    firstname: {
+        type: String,
+        required: true
+    },
+    lastname: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
-        requied: true,
+        required: true,
         unique: 1,
         trim: true
     },

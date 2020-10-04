@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import Wrapper from "./components/Wrapper";
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import places from './utils/locationapi/places'
 import placesfromlocation from './utils/locationapi/placesfromlocation'
@@ -16,36 +15,57 @@ import Profile from './components/Profile/index';
 import Navbar from './components/Navbar';
 import CheckOut from './components/CheckOut/index';
 // import * as userFunction from './components/userFunction/index'
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { HomePage } from './components/HomePage/HomePage'
+import { store } from '../src/components/_helpers/index';
+import { App } from '../src/components/App/App';
+import { LoginPage } from './components/LoginPage/LoginPage';
+import { RegisterPage } from './components/RegisterPage';
+import { PrivateRoute } from './components/_components/PrivateRoute';
+// render(
+//     <Provider store={store}>
+//         <App />
+//     </Provider>,
+//     document.getElementById('app')
+// );
 
-const newBtn = new PayPalExpressBtn()
 
-// console.log('Login route: ', userFunction.getProfile('user'))
 
-console.log(newBtn)
+// const newBtn = new PayPalExpressBtn()
+
+// // console.log('Login route: ', userFunction.getProfile('user'))
+
+// console.log(newBtn)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <div>
-      <Navbar></Navbar>
-        <Wrapper>
-          <Route exact path="/" component={About} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={signup} />
-          <Route exact path="/profile" component={Profile} />
-          {/* <Route exact path="/locations" component={Locations} /> */}
-          {/* <Route exact path="/order" component={Order} /> */}
-          <Route exact path="/checkout" component={CheckOut} />
-          {/* <Route exact path="/logout" component={About} /> */}
-        </Wrapper>
-        <Footer/>
-      </div>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Router>
+            <div>
+                <Navbar></Navbar>
+                <Wrapper>
+                    <Provider store={store}>
+                    <Route exact path="/" component={About} />
+                    {/* <Route exact path="/login" component={Login} />
+                    <Route exact path="/signup" component={signup} />
+                    <Route exact path="/profile" component={Profile} />  */}
+                            
+                            <Route path="/login" component={LoginPage} />
+                            <Route path="/register" component={RegisterPage} />
+                    </Provider>
+                    {/* <Route exact path="/locations" component={Locations} /> */}
+                    {/* <Route exact path="/order" component={Order} /> */}
+                    {/* <Route exact path="/checkout" component={CheckOut} /> */}
+                    {/* <Route exact path="/logout" component={About} /> */}
+                </Wrapper>
+                <Footer />
+            </div>
+        </Router>
+    </React.StrictMode>,
+    document.getElementById('app')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// // If you want your app to work offline and load faster, you can change
+// // unregister() to register() below. Note this comes with some pitfalls.
+// // Learn more about service workers: https://bit.ly/CRA-PWA
+// serviceWorker.unregister();
