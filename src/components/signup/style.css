@@ -12,3 +12,12 @@
     z-index: 99;
     padding: 17px 10px;
 }
+
+.text {
+    font-size: 21px;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 3em;
+    margin-left: 3em;
+    
+  }
