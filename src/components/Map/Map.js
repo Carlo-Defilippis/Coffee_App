@@ -1,9 +1,6 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import './map.css'
-import GeoLocateMe from '../../utils/locationapi/googlemaps'
 
 
 // var location = new GeoLocateMe();
