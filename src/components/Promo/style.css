@@ -8,18 +8,24 @@ ul {
  list-style-type: none;
  padding: 0;
  margin:0;
+ align-items: center;
+ justify-content: center;
+
 
 }
 
 ul li {
     border: 0px solid #ddd;
-    margin-top: -1px;
+    /* margin-top: -1px; */
     /* background-color: white; */
     padding: 12px;
+    align-items: center;
+
 }
 
 img {
 width: 250px;
 border-radius: 15px;
+
 
 }

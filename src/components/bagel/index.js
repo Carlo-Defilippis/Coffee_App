@@ -7,7 +7,7 @@ function Bagel() {
 
   useEffect(() => {
     axios
-      .get("https://coffeeproducts.herokuapp.com/api/products/coffee")
+      .get("https://coffeeproducts.herokuapp.com/api/products/bagel")
       .then((res) => {
         console.log(res);
         setProds(res.data);

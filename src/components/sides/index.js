@@ -7,7 +7,7 @@ function Sides() {
 
   useEffect(() => {
     axios
-      .get("https://coffeeproducts.herokuapp.com/api/products/coffee")
+      .get("https://coffeeproducts.herokuapp.com/api/products/sides")
       .then((res) => {
         console.log(res);
         setProds(res.data);
