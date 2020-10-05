@@ -1,21 +1,21 @@
 import React from "react";
 import Promo from "../Promo";
 import Coffee from "../Coffee";
-import Tea from "../Tea";
-import Sandwiches from "../Sandwiches";
-import Breakfast from "../Breakfast";
-import Pastries from "../Pastries";
-import Bagel from "../Bagel";
-import Sides from "../Sides";
+import Tea from "../tea";
+import Sandwiches from "../sandwiches";
+import Breakfast from "../breakfast";
+import Pastries from "../pastries";
+import Bagel from "../bagel";
+import Sides from "../sides";
 
 import "./style.css";
 
 function Selection() {
   return (
     <div className="row">
-      <div className="col-10 col-md-6 mx-auto mt-3">
+      <div className="col-12 col-md-6 mx-auto mt-3">
         <div className="card">
-          <div className="title"></div>
+          {/* <div className="title"></div> */}
           <h3 className="title">Fall Selections</h3>
           <Promo />
           <h3>Coffee</h3>

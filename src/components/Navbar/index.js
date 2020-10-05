@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import { SiCoffeescript } from 'react-icons/si';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Owner from '../Owner'
 import { IconContext } from 'react-icons/lib';
 import { Signup } from '../../App';
 
@@ -59,11 +60,6 @@ function Navbar() {
                                     location
                             </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                                    products
-                            </Link>
-                            </li>
                             <li className="nav-btn">
                                 {button ? (
                                     <Link to='/register' className="btn-link">
@@ -80,6 +76,9 @@ function Navbar() {
                                </Button>
                                         </Link>
                                     )}
+                            </li>
+                            <li className="nav-item">
+                               <Owner />
                             </li>
                         </ul>
                     </div>
