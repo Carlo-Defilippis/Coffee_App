@@ -1,3 +1,5 @@
+
+
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import ReactDOM from 'react-dom';
@@ -23,23 +25,11 @@ import { App } from '../src/components/App/App';
 import { LoginPage } from './components/LoginPage/LoginPage';
 import { RegisterPage } from './components/RegisterPage';
 import { PrivateRoute } from './components/_components/PrivateRoute';
-// render(
-//     <Provider store={store}>
-//         <App />
-//     </Provider>,
-//     document.getElementById('app')
-// );
 
-
-
-// const newBtn = new PayPalExpressBtn()
-
-// // console.log('Login route: ', userFunction.getProfile('user'))
-
-// console.log(newBtn)
-
-ReactDOM.render(
-    <React.StrictMode>
+    
+    
+    ReactDOM.render(
+        <React.StrictMode>
         <Router>
             <div>
                 <Navbar></Navbar>
@@ -49,7 +39,7 @@ ReactDOM.render(
                     {/* <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={signup} />
                     <Route exact path="/profile" component={Profile} />  */}
-                            
+                            <Route path="/HomePage" component={HomePage} />
                             <Route path="/login" component={LoginPage} />
                             <Route path="/register" component={RegisterPage} />
                     </Provider>
@@ -63,9 +53,33 @@ ReactDOM.render(
         </Router>
     </React.StrictMode>,
     document.getElementById('app')
-);
-
-// // If you want your app to work offline and load faster, you can change
-// // unregister() to register() below. Note this comes with some pitfalls.
-// // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+    );
+    
+    // // // If you want your app to work offline and load faster, you can change
+    // // // unregister() to register() below. Note this comes with some pitfalls.
+    // // // Learn more about service workers: https://bit.ly/CRA-PWA
+    // // serviceWorker.unregister();
+    // import React from 'react';
+    // import { render } from 'react-dom';
+    // import { Provider } from 'react-redux';
+    // import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+    // import { store } from './components/_helpers/store';
+    // import { App } from './components/App/App';
+    // import About from './pages/About'
+    // import Footer from './components/Footer';
+    // import Navbar from './components/Navbar';
+    
+    // render(
+    //     <Router>
+    //         <div>
+    //             <Navbar></Navbar>
+    //             <Provider store={store}>
+    //                 <App />
+    //             </Provider>
+    //             <Footer />
+    //         </div>
+    //     </Router>,
+    //     document.getElementById('app')
+    // );
+    
+    

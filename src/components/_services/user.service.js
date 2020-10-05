@@ -15,12 +15,13 @@ export const userService = {
 };
 
 function login(email, password) {
+    var token = localStorage.getItem('id_token');
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
     };
-    console.log('THIS GOT HIT', email, password, requestOptions)
+    console.log("THIS IS THE LOCAL STORAGE TOKEN", token)
     return fetch(`${config}/users/authenticate`, requestOptions)
         .then(handleResponse)
         .then(user => {
