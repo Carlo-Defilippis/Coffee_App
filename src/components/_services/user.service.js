@@ -1,7 +1,7 @@
 // import config from 'config';
 import { authHeader } from '../_helpers';
 
-var config = 'http://localhost:5000'
+var config = 'https://coffee-app-group6.herokuapp.com'
 
 
 export const userService = {
@@ -95,7 +95,6 @@ function handleResponse(response) {
                 // auto logout if 401 response returned from api
                 logout();
                 window.location.reload();
-                console.log("Window was reloaded!")
             }
 
             const error = (data && data.message) || response.statusText;
