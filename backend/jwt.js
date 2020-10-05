@@ -4,7 +4,9 @@ const userService = require('../models/user.service');
 
 module.exports = jwt;
 
+
 function jwt() {
+    var secret = process.env.SECRET
     const secret = config.secret;
     console.log("This is the secret shhhhhh: ",secret)
     return expressJwt({ secret, algorithms: ['HS256'], isRevoked }).unless({
@@ -21,12 +23,12 @@ function jwt() {
 
 async function isRevoked(req, payload, done) {
     const user = await userService.getById(payload.sub);
-
+    
     // revoke token if user no longer exists
     if (!user) {
         console.log('You are not a user!')
         return done(null, true);
     }
-
+    
     done();
 };
