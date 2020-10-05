@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.31",
-    "@fortawesome/free-solid-svg-icons": "^5.15.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
     "@googlemaps/google-maps-services-js": "^3.1.6",
     "@react-google-maps/api": "^1.10.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -56,14 +54,13 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "npm run seed && node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "seed": "node db/seed.js",
-    "client": "npm run start",
-    "install": "npm install",
-    "build": "npm run build",
-    "heroku-postbuild": "npm run build"
+    "dev": "react-scripts start",
+    "start": "node backend/server.js && serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm install && react-scripts build && npm run build",
+    "pack": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
