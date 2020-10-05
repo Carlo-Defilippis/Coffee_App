@@ -54,10 +54,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm install && npm run build",
-    "pack": "webpack",
-    "buildnew": "webpack --mode production",
-    "startdev": "webpack-dev-server --open"
+    "pack": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
