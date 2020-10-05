@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: rgb(128, 141, 158);
+  background-color: rgb(109, 146, 182);
   bottom: 0;
   width: 100%;
   display: flex;
@@ -7,7 +7,9 @@
   /* justify-content: center; */
   align-items: center;
   position: fixed;
-}
+  /* margin: 0px 0px 0px 0px;  */
+  height: 60px; 
+  }
 
 /* .footer-subscription {
   display: flex;
@@ -105,9 +107,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  /* width: 90%; */
   max-width: 1000px;
-  margin: 40px auto 0 auto;
+  /* margin: 40px auto 0 auto; */
 }
 
 .social-icons {
@@ -119,19 +121,19 @@
 
 .social-logo {
   color: #fff;
-  justify-self: start;
-  margin-left: 20px;
+  justify-self: end;
+  /* margin-left: 20px; */
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
-  align-items: center;
-  margin-bottom: 16px;
+  /* align-items: center; */
+  /* margin-bottom: 16px; */
 }
 
 .website-rights {
   color: #fff;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   text-align: center;
 }
 

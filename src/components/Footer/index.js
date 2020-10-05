@@ -13,11 +13,12 @@ function Footer() {
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
+            <small className='website-rights'>Coffee App © 2020</small>
+            </div>
             <Link to='/' className='social-logo'>
               <SiCoffeescript className='navbar-icon' />
-              Coffee App
+              
             </Link>
-            </div>
           <div className='social-icons'>
             <Link
               className='social-icon-link'
@@ -46,7 +47,6 @@ function Footer() {
           </div>
         </div>
       </section>
-      <small className='website-rights'>Coffee App © 2020</small>
     </div>
   );
 }

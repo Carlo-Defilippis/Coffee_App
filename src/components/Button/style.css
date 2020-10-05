@@ -1,5 +1,5 @@
 :root { 
-    --primary: rgb(107, 163, 182);
+    --primary: rgb(109, 146, 182);
 }
 
 .btn {
@@ -14,7 +14,7 @@
 
 .btn-primary {
     background-color: var (var(--primary));
-    color: grey;
+    color:rgb(109, 146, 182);
     border: 1px solid var(--primary);
 }
 .btn--outline {
@@ -42,7 +42,7 @@
     text-decoration: none;
     font-size: 24px;
     background-color: transparent;
-    color: whitesmoke;
+    color: rgb(109, 146, 182);
     padding: 14px 20px;
     border:1px solida whitesmoke;
     transition:  all 0.3s ease-out;
@@ -58,12 +58,12 @@
 .btn--mobile:hover {
     transition: all 0.3s ease-out;
     background: whitesmoke;
-    color: grey;
+    /* color: grey; */
 }
 
 .btn--wide:hover {
     color:white;
-    background-color: lightsteelblue;
+    background-color: rgb(109, 146, 182);
     transition: all 0.2 ease-out;
 }
 .btn-link {
@@ -71,32 +71,34 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
   height: 100%;
   width: 100%;
 }
-.blue {
+/* .blue {
     background-color: lightsteelblue;
     color: whitesmoke;
     border:none;
-}
-.red {
+} */
+/* .red {
     background-color: red;
     color: whitesmoke;
     border:none;
-}
+} */
 .primary {
-    background-color: lightslategray;
+    background-color:rgb(109, 146, 182);
     color: whitesmoke;
     border:none;
 }
 .primary:hover {
-background-color: whitesmoke;
-color: grey;
+background-color: rgb(109, 146, 182);
+color: white;
 border: none;
+
+
 }
-.yellow {
+/* .yellow {
     background-color: antiquewhite;
     color: whitesmoke;
     border:none;
-}
+} */
