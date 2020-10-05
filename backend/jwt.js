@@ -10,11 +10,11 @@ function jwt() {
     return expressJwt({ secret, algorithms: ['HS256'], isRevoked }).unless({
         path: [
             // public routes that don't require authentication
-            '/',
-            '/login',
-            '/register',
-            '/users/authenticate',
-            '/users/register'
+            'https://coffee-app-group6.herokuapp.com/',
+            'https://coffee-app-group6.herokuapp.com/login',
+            'https://coffee-app-group6.herokuapp.com/register',
+            'https://coffee-app-group6.herokuapp.com/users/authenticate',
+            'https://coffee-app-group6.herokuapp.com/users/register'
         ]
     });
 }
