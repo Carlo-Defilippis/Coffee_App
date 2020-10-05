@@ -23,7 +23,7 @@ import { App } from '../src/components/App/App';
 import { LoginPage } from './components/LoginPage/LoginPage';
 import { RegisterPage } from './components/RegisterPage/RegisterPage';
 import { PrivateRoute } from './components/_components/PrivateRoute';
-
+import Map from './components/Map/Map'
     
     
     ReactDOM.render(
@@ -41,6 +41,7 @@ import { PrivateRoute } from './components/_components/PrivateRoute';
                             <Route exact path="/login" component={LoginPage} />
                             <Route exact path="/register" component={RegisterPage} />
                     <Route exact path="/" component={About} />
+                    <Route exact path="/location" component={Map} />
                             </Switch>
                     </Provider>
                     {/* <Route exact path="/locations" component={Locations} /> */}
