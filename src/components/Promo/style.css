@@ -1,9 +1,9 @@
-.container {
+/* .container {
     width: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
- }
+ } */
 ul {
  list-style-type: none;
  padding: 0;
@@ -12,9 +12,9 @@ ul {
 }
 
 ul li {
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     margin-top: -1px;
-    background-color: white;
+    /* background-color: white; */
     padding: 12px;
 }
 

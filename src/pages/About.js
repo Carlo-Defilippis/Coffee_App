@@ -33,6 +33,7 @@ export default function About() {
           <Col size="md-4"><div><br></br></div></Col>
         </Row>
       </Container>
+      
     </div>
   );
 }
