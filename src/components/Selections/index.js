@@ -1,12 +1,12 @@
 import React from "react";
 import Promo from "../Promo";
 import Coffee from "../Coffee";
-import Tea from "../tea";
-import Sandwiches from "../sandwiches";
-import Breakfast from "../breakfast";
-import Pastries from "../pastries";
-import Bagel from "../bagel";
-import Sides from "../sides";
+import Tea from "../Tea";
+import Sandwiches from "../Sandwiches";
+import Breakfast from "../Breakfast";
+import Pastries from "../Pastries";
+import Bagel from "../Bagel";
+import Sides from "../Sides";
 
 import "./style.css";
 
