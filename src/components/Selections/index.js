@@ -14,7 +14,7 @@ function Selection() {
   return (
 
     <div className="row justify-content-center">
-      <div className='col col-md-4 mt-5'>
+      <div className='col col-md-4 mt-3'>
         <div className="card-deck">
           <div className="card">
             {/* <div className="title"></div> */}
@@ -29,29 +29,37 @@ function Selection() {
             <h3 className="title">Tea</h3>
             <Tea />
           </div>
-          <div className="card">
-            <h3 className="title">Sandwiches</h3>
-            <Sandwiches />
-          </div>
+        </div>
+      </div>
+      <div className='col col-md-4 mt-5'>
+        <div className="card-deck">
           <div className="card">
             <h3 className="title">Breakfast</h3>
             <Breakfast />
-          </div>
-          <div className="card">
-            <h3 className="title">Pastries</h3>
-            <Pastries />
           </div>
           <div className="card">
             <h3 className="title">Bagel</h3>
             <Bagel />
           </div>
           <div className="card">
-            <h3 className="title">Sides</h3>
-            <Sides />
+            <h3 className="title">Sandwiches</h3>
+            <Sandwiches />
+          </div>
+          </div>
+          </div>
+          <div className='col col-md-4 mt-5'>
+            <div className="card-deck">
+              <div className="card">
+                <h3 className="title">Sides</h3>
+                <Sides />
+              </div>
+              <div className="card">
+            <h3 className="title">Pastries</h3>
+            <Pastries />
+          </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
   );
 }
 
