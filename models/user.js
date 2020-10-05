@@ -39,7 +39,7 @@ userSchema.set('toJSON', {
 
 // create a userSchema with email and password that user we'll enter. 
 
-let SALT = 10;
+// let SALT = 10;
 
 // Hashing the password before saving it to the database
 // we use a predefined function called "pre" which will let the userSchema to hash the password before moving it to the database
