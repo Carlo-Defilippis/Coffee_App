@@ -5,7 +5,7 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import Navbar from "../components/Navbar"
 import Button from "../components/Button"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 import Login from "../components/Login"
 
 export default function About() {
@@ -33,6 +33,7 @@ export default function About() {
           <Col size="md-4"><div><br></br></div></Col>
         </Row>
       </Container>
+      
       
     </div>
   );

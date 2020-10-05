@@ -46,9 +46,10 @@ ReactDOM.render(
           {/* <Route exact path="/order" component={Order} /> */}
           {/* <Route exact path="/checkout" component={CheckOut} /> */}
           {/* <Route exact path="/logout" component={About} /> */}
+          <Footer/>
         </Wrapper>
         {/* </Container> */}
-        <Footer/>
+      
       </div>
     </Router>
     <App />

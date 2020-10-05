@@ -18,19 +18,19 @@ function Selection() {
           {/* <div className="title"></div> */}
           <h3 className="title">Fall Selections</h3>
           <Promo />
-          <h3>Coffee</h3>
+          <h3 className="title">Coffee</h3>
           <Coffee />
-          <h3>Tea</h3>
+          <h3 className="title">Tea</h3>
           <Tea />
-          <h3>Sandwiches</h3>
+          <h3 className="title">Sandwiches</h3>
           <Sandwiches />
-          <h3>Breakfast</h3>
+          <h3 className="title">Breakfast</h3>
           <Breakfast />
-          <h3>Pastries</h3>
+          <h3 className="title"> Pastries</h3>
           <Pastries />
-          <h3>Bagel</h3>
+          <h3 className="title">Bagel</h3>
           <Bagel />
-          <h3>Sides</h3>
+          <h3 className="title">Sides</h3>
           <Sides />
         </div>
       </div>
