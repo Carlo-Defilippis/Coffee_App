@@ -13,9 +13,9 @@ import "./style.css";
 function Selection() {
   return (
     <div className="row">
-      <div className="col-10 col-md-6 mx-auto mt-3">
+      <div className="col-12 col-md-6 mx-auto mt-3">
         <div className="card">
-          <div className="title"></div>
+          {/* <div className="title"></div> */}
           <h3 className="title">Fall Selections</h3>
           <Promo />
           <h3>Coffee</h3>

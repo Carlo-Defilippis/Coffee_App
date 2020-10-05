@@ -31,7 +31,7 @@ ReactDOM.render(
     <Router>
       <div>
       <Navbar/>
-      <Container>
+      {/* <Container> */}
         <Wrapper>
           
           <Route exact path="/" component={About} />
@@ -47,7 +47,7 @@ ReactDOM.render(
           {/* <Route exact path="/checkout" component={CheckOut} /> */}
           {/* <Route exact path="/logout" component={About} /> */}
         </Wrapper>
-        </Container>
+        {/* </Container> */}
         <Footer/>
       </div>
     </Router>
