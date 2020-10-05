@@ -6,12 +6,18 @@ const path = require('path');
 const app = express();
 const jwt = require('../backend/jwt')
 require('./database');
+const csp = require('express-csp-header');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-
+app.use(csp({
+    policies: {
+        'default-src': [csp.NONE],
+        'img-src': [csp.SELF],
+    }
+}));
 // use jwt auth to secure the api
 app.use(jwt());
 
