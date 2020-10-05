@@ -95,7 +95,6 @@ function handleResponse(response) {
                 // auto logout if 401 response returned from api
                 logout();
                 window.location.reload();
-                console.log("Window was reloaded!")
             }
 
             const error = (data && data.message) || response.statusText;

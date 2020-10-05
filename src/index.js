@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import Wrapper from "./components/Wrapper";
 import './index.css';
@@ -33,13 +33,15 @@ import { PrivateRoute } from './components/_components/PrivateRoute';
                 <Navbar></Navbar>
                 <Wrapper>
                     <Provider store={store}>
-                    <Route exact path="/" component={About} />
+                    <Switch>
                     {/* <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={signup} />
                     <Route exact path="/profile" component={Profile} />  */}
-                            <Route path="/HomePage" component={HomePage} />
-                            <Route path="/login" component={LoginPage} />
-                            <Route path="/register" component={RegisterPage} />
+                            <PrivateRoute exact path="/HomePage" component={HomePage} />
+                            <Route exact path="/login" component={LoginPage} />
+                            <Route exact path="/register" component={RegisterPage} />
+                    <Route exact path="/" component={About} />
+                            </Switch>
                     </Provider>
                     {/* <Route exact path="/locations" component={Locations} /> */}
                     {/* <Route exact path="/order" component={Order} /> */}

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Checkout } from '../CheckOut';
+import { Link } from 'react-router-dom';
 import '../Selections/style.css'
 
 function Pastries() {

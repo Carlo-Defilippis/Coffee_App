@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import '../Selections/style.css'
+import '../Selections/style.css';
+import { Link } from 'react-router-dom';
+import { Checkout } from '../CheckOut';
 
 function Bagel() {
   const [prods, setProds] = useState([]);
@@ -24,7 +26,9 @@ function Bagel() {
                 <img src={prod.image} alt={prod.product} /><br></br>
                 <span>{prod.description}</span><br></br>
                 <div>
+                  <Link to='/Checkout'>
                     <button className="add">Add</button>
+                    </Link>
                 </div>
                 </li>
                 ))}

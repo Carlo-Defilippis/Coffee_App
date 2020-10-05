@@ -33,7 +33,8 @@ function LoginPage() {
         setSubmitted(true);
         if (email && password) {
             // get return url from location state or default to home page
-            const { from } = location.state || { from: { pathname: "/" } };
+            const { from } = location.state || { from: { pathname: "/HomePage" } };
+            console.log('THIS IS THE HANDLESUBMIT location.state: ', from)
             dispatch(userActions.login(email, password, from));
         }
     }
@@ -44,14 +45,14 @@ function LoginPage() {
             <form name="form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" value={email} onChange={handleChange} defaultValue="Username" className={'form-control' + (submitted && !email ? ' is-invalid' : '')} />
+                    <input type="email" name="email" value={email} onChange={handleChange} className={'form-control' + (submitted && !email ? ' is-invalid' : '')} />
                     {submitted && !email &&
                         <div className="invalid-feedback">email is required</div>
                     }
                 </div>
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" name="password" value={password} onChange={handleChange} defaultValue="Password" className={'form-control' + (submitted && !password ? ' is-invalid' : '')} />
+                    <input type="password" name="password" value={password} onChange={handleChange} className={'form-control' + (submitted && !password ? ' is-invalid' : '')} />
                     {submitted && !password &&
                         <div className="invalid-feedback">Password is required</div>
                     }
