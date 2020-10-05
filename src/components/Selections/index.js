@@ -12,6 +12,7 @@ import "./style.css";
 
 function Selection() {
   return (
+    
     <div className="row">
       <div className="col-12 col-md-6 mx-auto mt-3">
         <div className="card">
@@ -26,7 +27,7 @@ function Selection() {
           <Sandwiches />
           <h3 className="title">Breakfast</h3>
           <Breakfast />
-          <h3 className="title"> Pastries</h3>
+          <h3 className="title">Pastries</h3>
           <Pastries />
           <h3 className="title">Bagel</h3>
           <Bagel />
