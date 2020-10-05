@@ -23,7 +23,7 @@ const Button = ({
 
     const checkButtonColor = STYLES.includes(buttonColor) ? buttonColor : COLOR[0]
     return (
-        <Link to='/signup' className='btn-link'>
+        <Link to='/register' className='btn-link'>
         <button className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`} onClick={onClick} type={type}>{children}</button>
         </Link>
     )

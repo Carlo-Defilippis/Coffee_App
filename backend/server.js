@@ -1,16 +1,22 @@
+require('rootpath')();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const path = require('path')
+const path = require('path');
 const app = express();
+const jwt = require('../backend/jwt')
 require('./database');
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+
+// use jwt auth to secure the api
+app.use(jwt());
+
 // API
-const users = require('../api/users');
-app.use('/api/users', users);
+app.use('/users', require('../models/users.controller'));
 
 app.use(express.static(path.join(__dirname, '../build')))
 app.get('*', (req, res) => {
