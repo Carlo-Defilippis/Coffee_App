@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--outline'];
 
@@ -22,8 +23,9 @@ const Button = ({
 
     const checkButtonColor = STYLES.includes(buttonColor) ? buttonColor : COLOR[0]
     return (
-
+        <Link to='/register' className='btn-link'>
         <button className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`} onClick={onClick} type={type}>{children}</button>
+        </Link>
     )
 }
 

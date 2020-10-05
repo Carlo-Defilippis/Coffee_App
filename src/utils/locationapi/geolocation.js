@@ -15,6 +15,5 @@ async getAddress() {
 
   // return lat and lng
   return `${lat},${lon}`;  
-}
-
+  }
 }

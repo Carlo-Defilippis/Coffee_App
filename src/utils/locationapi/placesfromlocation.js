@@ -40,7 +40,7 @@ geoLocation.getAddress().then(r => {
 
         })
         .catch(e => {
-            console.log("Returned an error of: ", e);
+            // console.log("Returned an error of: ", e);
         });
 });
 

@@ -38,7 +38,9 @@ mongoose.connect('mongodb://localhost/DemoDB', {useNewUrlParser: true, useUnifie
 const Schema = mongoose.Schema;
 // create userDetail with username and password fields
 const userDetail = new Schema({
-    username: String,
+    firstname: String,
+    lastname: String,
+    email: String,
     password: String
 });
 

@@ -3,8 +3,11 @@ import Button from '../Button/index'
 import { Link } from 'react-router-dom';
 import './style.css';
 import { SiCoffeescript } from 'react-icons/si';
+import { MdShoppingCart } from 'react-icons/md' 
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Owner from '../Owner'
 import { IconContext } from 'react-icons/lib';
+import { Signup } from '../../App';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -34,7 +37,7 @@ function Navbar() {
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
                 <div className="navbar">
-                    <div className="navbar-container container">
+                    <div className="navbar-container container-fluid">
                         <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
                             <SiCoffeescript className='navbar-icon' />
                     Coffee App
@@ -55,30 +58,33 @@ function Navbar() {
                             </li>
                             <li className="nav-item">
                                 <Link to='/location' className='nav-links' onClick={closeMobileMenu}>
-                                    location
+                                    Location
                             </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                                    products
-                            </Link>
-                            </li>
-                            <li className="nav-btn">
+                            </li>                            
+                            {/* <li className="nav-btn">
                                 {button ? (
-                                    <Link to='/sign-up' className="btn-link">
+                                    <Link to='/register' className="btn-link">
                                         <Button buttonStyle='btn--outline' buttonSize='btn--mobile'
                                             onClick={closeMobileMenu}>
                                             Sign Up
                                </Button>
                                     </Link>
                                 ) : (
-                                        <Link to='/sign-up' className='btn-link'>
+                                        <Link to='/register' className='btn-link'>
                                             <Button buttonStyle='btn--outline'
                                                 buttonSize='btn--mobile'>
                                                 Sign Up
                                </Button>
                                         </Link>
                                     )}
+                            </li> */}
+                            <li className="nav-item">
+                                <Link to='/location' className='nav-links' onClick={closeMobileMenu}> <MdShoppingCart className='navbar-icon' />
+                                    Check Out
+                            </Link>
+                            </li>
+                            <li className="nav-item">
+                               <Owner />
                             </li>
                         </ul>
                     </div>

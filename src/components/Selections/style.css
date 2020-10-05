@@ -1,0 +1,58 @@
+* {
+    scroll-behavior: auto;
+    
+  }
+
+  body{
+    background-color: rgb(235, 234, 232);
+  }
+  .card {
+    /* width: 100%; */
+    
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    background-color: white; 
+     box-shadow: 0px 0px 12px 2px rgb(51, 41, 24);
+    border-radius: 15px;
+    /* position: relative; */
+    /* z-index: 99;
+    width: 100%;
+    height: 100%;
+    z-index: 99; */
+    /* padding: 17px 10px; */
+    /* margin: 0 auto; Added */
+    /* float: none; Added */
+    /* margin-bottom: 10px; Added */
+    
+    }
+    
+    .title {
+    font-size: 24px;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    }
+    
+
+
+h3 {
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.footer-container{
+  margin:0;
+}
+
+.text {
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 15px;
+
+}
+
+

@@ -1,6 +1,7 @@
 // create a userSchema with email and password that user  will enter. 
 const mongoose = require('mongoose');
 
+
 const userSchema = mongoose.Schema({
     email: {
         type: String,
