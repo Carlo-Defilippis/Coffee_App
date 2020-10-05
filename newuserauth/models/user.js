@@ -1,9 +1,6 @@
 // create a userSchema with email and password that user  will enter. 
 const mongoose = require('mongoose');
 
-Object.getOwnPropertyNames(mongoose).forEach(prop => {
-    console.log("This is props of mongoose in user.js: ", prop);
-  });
 
 const userSchema = mongoose.Schema({
     email: {
