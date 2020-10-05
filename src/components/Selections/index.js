@@ -14,7 +14,7 @@ function Selection() {
   return (
 
     <div className="row justify-content-center">
-      <div className='col col-md-4 mt-5'>
+      <div className='col col-md-4 mt-3'>
         <div className="card-deck">
           <div className="card">
             {/* <div className="title"></div> */}
