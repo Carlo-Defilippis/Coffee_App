@@ -3,6 +3,7 @@ import Button from '../Button/index'
 import { Link } from 'react-router-dom';
 import './style.css';
 import { SiCoffeescript } from 'react-icons/si';
+import { MdShoppingCart } from 'react-icons/md' 
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Owner from '../Owner'
 import { IconContext } from 'react-icons/lib';
@@ -36,7 +37,7 @@ function Navbar() {
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
                 <div className="navbar">
-                    <div className="navbar-container container">
+                    <div className="navbar-container container-fluid">
                         <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
                             <SiCoffeescript className='navbar-icon' />
                     Coffee App
@@ -59,8 +60,8 @@ function Navbar() {
                                 <Link to='/location' className='nav-links' onClick={closeMobileMenu}>
                                     Location
                             </Link>
-                            </li>
-                            <li className="nav-btn">
+                            </li>                            
+                            {/* <li className="nav-btn">
                                 {button ? (
                                     <Link to='/register' className="btn-link">
                                         <Button buttonStyle='btn--outline' buttonSize='btn--mobile'
@@ -76,6 +77,11 @@ function Navbar() {
                                </Button>
                                         </Link>
                                     )}
+                            </li> */}
+                            <li className="nav-item">
+                                <Link to='/location' className='nav-links' onClick={closeMobileMenu}> <MdShoppingCart className='navbar-icon' />
+                                    Check Out
+                            </Link>
                             </li>
                             <li className="nav-item">
                                <Owner />
