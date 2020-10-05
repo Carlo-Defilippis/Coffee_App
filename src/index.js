@@ -18,7 +18,7 @@ import Selection from './components/Selections';
 import App from './App';
 import Navbar from './components/Navbar'
 import Container from './components/Container'
-const newBtn = new PayPalExpressBtn()
+import CheckOut from './components/CheckOut'
 
 
 
@@ -46,7 +46,7 @@ ReactDOM.render(
           {/* <Route exact path="/promo" component={Promotions} /> */}
           {/* <Route exact path="/locations" component={Locations} /> */}
           {/* <Route exact path="/order" component={Order} /> */}
-          {/* <Route exact path="/checkout" component={CheckOut} /> */}
+          <Route exact path="/checkout" component={CheckOut} />
           {/* <Route exact path="/logout" component={About} /> */}
           <Footer/>
         </Wrapper>

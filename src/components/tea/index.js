@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
+import { Checkout } from '../CheckOut';
 import '../Selections/style.css'
 
 function Tea() {
@@ -24,7 +26,9 @@ function Tea() {
                 <img src={prod.image} alt={prod.product} /><br></br>
                 <span className='text'>{prod.description}</span><br></br>
                 <div>
+                  <Link to='/Checkout'>
                     <button className="add btn-info">Add</button>
+                    </Link>
                 </div>
                 </li>
                 ))}

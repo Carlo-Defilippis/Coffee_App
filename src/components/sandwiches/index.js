@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../Selections/style.css'
+import { Link } from 'react-router-dom'
+import { Checkout } from '../CheckOut'
+
 
 function Sandwiches() {
   const [prods, setProds] = useState([]);
@@ -23,7 +26,9 @@ function Sandwiches() {
                 <img src={prod.image} alt={prod.product} /><br></br>
                 <span className='text'>{prod.description}</span><br></br>
                 <div>
+                  <Link to='./Checkout'>
                     <button className="add btn-info">Add</button>
+                    </Link>
                 </div>
                 </li>
                 ))}

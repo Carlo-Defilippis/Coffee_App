@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
+
 class LoadScriptOnlyIfNeeded extends LoadScript {
     componentDidMount() {
       const cleaningUp = true
