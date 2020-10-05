@@ -1,7 +1,7 @@
 // import config from 'config';
 import { authHeader } from '../_helpers';
 
-var config = 'http://localhost:5000'
+var config = 'https://coffee-app-group6.herokuapp.com'
 
 
 export const userService = {
