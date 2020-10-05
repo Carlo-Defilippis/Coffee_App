@@ -20,11 +20,11 @@ function Sides() {
         <div className='container'>
             <ul className="list-group">
                 {prods.map((prod) => (
-                <li key={prod._id}>{prod.product} ${prod.price}<br></br>
+                <li className='text' key={prod._id}>{prod.product} ${prod.price}<br></br>
                 <img src={prod.image} alt={prod.product} /><br></br>
-                <span>{prod.description}</span><br></br>
+                <span className='text'>{prod.description}</span><br></br>
                 <div>
-                    <button className="add">Add</button>
+                    <button className="add btn-info">Add</button>
                 </div>
                 </li>
                 ))}
