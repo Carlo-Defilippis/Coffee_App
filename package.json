@@ -52,12 +52,8 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-<<<<<<< HEAD
-    "start": "react-scripts start",
-=======
     "dev": "react-scripts start",
     "start": "node backend/server.js && serve -s build",
->>>>>>> 08f23b666247cc2acdcf8c40298d117db97ae189
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
