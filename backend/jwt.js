@@ -14,7 +14,12 @@ function jwt() {
             'https://coffee-app-group6.herokuapp.com/login',
             'https://coffee-app-group6.herokuapp.com/register',
             'https://coffee-app-group6.herokuapp.com/users/authenticate',
-            'https://coffee-app-group6.herokuapp.com/users/register'
+            'https://coffee-app-group6.herokuapp.com/users/register',
+            '/users/register',
+            '/users/authenticate',
+            '/register',
+            '/login',
+            '/'
         ]
     });
 }
