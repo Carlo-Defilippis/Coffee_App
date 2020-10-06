@@ -14,7 +14,7 @@ app.use(cors());
 
 
 // use jwt auth to secure the api
-app.use(jwt());
+// app.use(jwt());
 
 app.use("/", expressJWT({
     secret: app.get('secret'),
