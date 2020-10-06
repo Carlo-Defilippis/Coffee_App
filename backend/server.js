@@ -12,12 +12,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-
+var mySecret = process.env.SECRET
 // use jwt auth to secure the api
 // app.use(jwt());
 
 app.use("/", expressJWT({
-    secret: app.get('secret'),
+    secret: app.get(mySecret),
     getToken: function fromCookie(req) {
         var token = req.cookies.access_token || req.body.access_token || req.query.access_token || req.headers['x-access-token'];
         if (token) {
