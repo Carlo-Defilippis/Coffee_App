@@ -5,7 +5,7 @@ const userService = require('../models/user.service');
 
 
 function jwt() {
-    var secret = process.env.SECRET
+    var secret = config.secret
     console.log("This is the secret shhhhhh: ",secret)
     return expressJwt({ secret, algorithms: ['HS256'], isRevoked }).unless({
         path: [
