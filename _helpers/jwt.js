@@ -10,7 +10,19 @@ function jwt() {
         path: [
             // public routes that don't require authentication
             '/users/authenticate',
-            '/users/register'
+            '/users/register',
+            'https://coffee-app-group6.herokuapp.com/',
+            'https://coffee-app-group6.herokuapp.com/Login',
+            'https://coffee-app-group6.herokuapp.com/Register',
+            'https://coffee-app-group6.herokuapp.com/users/authenticate',
+            'https://coffee-app-group6.herokuapp.com/users/register',
+            '/users/register',
+            '/users/authenticate',
+            '/register',
+            '/Register',
+            '/Login',
+            '/login',
+            '/'
         ]
     });
 }
