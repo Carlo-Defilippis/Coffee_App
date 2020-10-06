@@ -10,7 +10,6 @@ import * as serviceWorker from './serviceWorker';
 import About from './pages/About'
 import Footer from './components/Footer';
 import Login from './components/Login/index';
-import signup from './components/signup/index';
 import Profile from './components/Profile/index';
 import Navbar from './components/Navbar';
 import CheckOut from './components/CheckOut/index';
