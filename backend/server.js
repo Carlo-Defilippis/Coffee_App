@@ -6,6 +6,7 @@ const path = require('path');
 const app = express();
 const jwt = require('../backend/jwt')
 require('./database');
+const expressJWT = require('express-jwt')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -15,6 +16,35 @@ app.use(cors());
 // use jwt auth to secure the api
 app.use(jwt());
 
+app.use("/", expressJWT({
+    secret: app.get('secret'),
+    getToken: function fromCookie(req) {
+        var token = req.cookies.access_token || req.body.access_token || req.query.access_token || req.headers['x-access-token'];
+        if (token) {
+            return token;
+        }
+        return null;
+    }
+}).unless({
+    path: [
+        '/',
+        '/login',
+        '/register',
+        '/users/authenticate',
+        '/users/register'
+    ]
+}
+));
+
+app.use(function (err, req, res, next) {
+    if (err.name === 'UnauthorizedError') {
+      return res.status(403).send({
+        success: false,
+        message: 'No token provided.'
+      });
+    }
+  });
+  
 // API
 app.use('/users', require('../models/users.controller'));
 
@@ -65,7 +95,7 @@ app.listen(port, () => {
 // //     .then(dbUser => {
 // //         res.redirect('/')
 // //     })
-    
+
 // //     .catch(err => {
 // //       res.json(err);
 // //     });
