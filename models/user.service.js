@@ -19,7 +19,7 @@ async function authenticate({ email, password }) {
     console.log('TEST: ', user, bcrypt.compareSync(password, user.password))
     if (user && bcrypt.compareSync(password, user.password)) {
         console.log('User ID: ', user.id)
-        const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: '7d' });
+        const token = jwt.sign({ sub: user.id }, process.env.SECRET, { expiresIn: '7d' });
         return {
             ...user.toJSON(),
             token
