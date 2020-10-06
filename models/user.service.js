@@ -20,6 +20,7 @@ async function authenticate({ email, password }) {
     if (user && bcrypt.compareSync(password, user.password)) {
         console.log('User ID: ', user.id)
         const token = jwt.sign({ sub: user.id }, process.env.SECRET, { expiresIn: '7d' });
+        console.log(token)
         return {
             ...user.toJSON(),
             token
