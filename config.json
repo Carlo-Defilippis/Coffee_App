@@ -1,3 +1,4 @@
 {
-    "secret": "carloivanmauryael"
+    "secret": "carloivanmauryael",
+    "connectionString": "mongodb+srv://maurya512:enph739ektA@cluster0.vufo2.mongodb.net/coffeeshopusersss?retryWrites=true&w=majority"
 }
